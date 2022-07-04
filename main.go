@@ -2,15 +2,16 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"os"
 )
 
-const weight = 70
-const C = 3000000
-
 func main() {
-	const enery = weight * C
-	fmt.Println(enery)
-	b := math.Pow(enery, 2)
-	fmt.Println(b)
+	file, err := os.Create("confeve.txt")
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+	defer file.Close()
+	fmt.Fprint(file, "Сегодня ")
+	fmt.Fprintln(file, "хорошая погода")
 }
