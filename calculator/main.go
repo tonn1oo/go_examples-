@@ -16,7 +16,6 @@ func main() {
 	switch operator {
 	case "+":
 		output = num1 + num2
-		break
 	case "-":
 		output = num1 - num2
 	case "*":
@@ -29,5 +28,4 @@ func main() {
 		fmt.Println("Invalid Operation")
 	}
 	fmt.Printf("%d %s %d = %d ", num1, operator, num2, output)
-
 }
